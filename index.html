@@ -1,0 +1,358 @@
+<!doctype html>
+  <html>
+      <head>
+          <title>
+              Hack Q Login Page
+          </title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,600&display=swap" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,600&family=Fjalla+One&display=swap" rel="stylesheet">
+      </head> 
+               <!-- Css Code -->
+       <style>
+        *{
+          margin:0;
+          padding:0;
+          }                   
+       body{background-image:url('Hack Q/Hackerscaled.jpg');
+            background-position:945px -90px; 
+            background-size:cover;
+            color:white;
+           
+            }
+      /* key frames */
+      @keyframes move{
+         0%{border-color:yellow blue blue blue;}
+          10%{border-color:yellow yellow blue blue;}
+           20%{border-color:yellow yellow yellow blue;}
+            30%{border-color:yellow yellow yellow yellow;}
+             40%{border-color:#0048BA #7CB9E8 #DB2D43 	#E52B50;}
+              50%{border-color:#3B7A57	#FFBF00 #9966CC #3DDC84;}
+               60%{border-color:#841B2D #00FFFF #D0FF14 #007FFF;}
+                70%{border-color:#7C0A02 #2E5894 #3D0C02 #54626F;}
+                 80%{border-color:#1F75FE #333399 #8A2BE2 #66FF00;}
+                  90%{border-color:#FFAA1D #1B4D3E #AA381E #FBEC5D;}
+                   100%{border-color:#8F00FF #8806CE #87421F #9EFD38;}
+       }
+     .main{
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          width:100vw;
+          height:100vh;
+         }
+            
+      #main{ 
+           background-color:rgba(8,8,8,0.9); 
+            border-radius:10px;
+            color:white;
+           text-align:center;
+          box-shadow:15px 10px 10px blue;
+          border-style:inset;
+          border-color:blue;
+          animation-name:move;
+          animation-duration:5s;
+         animation-iteration-count:infinite;
+          width:22vw;
+          height:51vh;
+          overflow-y: hidden;
+           }
+      
+      
+       h1{padding-top:6px;
+          letter-spacing:3.7px;
+          font-size:50px;
+          text-align:center;
+          font-family: 'Oswald', sans-serif;
+         }    
+       form{font-size:21px;
+           padding-bottom:30px;
+          letter-spacing:2px;
+          }
+        #user{padding-top:10px;
+           /* padding-right:120px; */
+            padding-bottom:0px;
+              font-style:italic;
+              font-size:30px;
+              text-align:left;
+              letter-spacing:2.5px;
+              padding-left:25px;
+              font-family: 'Asap', sans-serif;
+            }  
+        #input{padding-right:30px;
+            text-align:left;
+            padding-left:25px;
+          padding-top:25px; 
+          }
+        #password{padding-right:220px;
+         padding-top:10px;
+          font-style:italic;
+          text-align:left;
+          padding-left:25px;
+          font-size:30px;
+          letter-spacing:2.5px;
+          font-family: 'Asap', sans-serif;
+         }
+        #inpas{padding-right:30px;
+          padding-top:10px;
+         text-align:left;
+         padding-left:25px;
+          }         
+       #for{padding-right:50px;
+          text-decoration:none;
+          padding-top:20px;
+          margin-bottom:15px;
+          text-align:left;
+          padding-left:15px;
+          font-size:25px;
+         font-family: 'Asap', sans-serif;
+font-family: 'Fjalla One', sans-serif;
+          }
+          #fr{
+             text-decoration:none;
+          }
+        #fr:hover{
+           text-decoration:underline;
+           color:red;
+       
+           } 
+        .create{
+            height:5vh;
+            
+        }    
+        #create{
+          width:20vw;
+             height:7vh; 
+             font-size:25px;
+             text-decoration:none;  
+             font-family: 'Asap', sans-serif;
+             font-family: 'Fjalla One', sans-serif;
+             color:rgba(39, 39, 219, 0.911);
+             
+        }
+        #create:hover{
+              text-decoration: underline;
+              color:rgba(38, 246, 38, 0.883);
+        }
+        
+        #asd{margin-top:15px;
+             text-decoration:none;
+             padding:3px 50px;
+             border-radius:5px;
+             font-size:30px;
+             color:white;
+            background-image:radial-gradient(circle,black 50%, blue);
+           
+              }      
+       #asd:hover{
+          color:white;
+          background-image:radial-gradient(circle,black 50%, red);
+           letter-spacing:3px;
+          }   
+        input{
+          font-size:20px;
+          padding-right:30px;
+          padding-left:7px;
+          padding-top:7px;
+          padding-bottom:5px;
+          border-radius:5px;
+          border-style:outset;
+          border-width:1px;
+          color:indigo;
+        
+          } 
+     .error{
+          color:red;
+          letter-spacing:2px;
+          text-align:left;
+          padding-left:25px;
+          font-size:20px;
+        }  
+         
+       ::selection{
+       color:black;
+       background-color:rgb(20,50,200);
+       } 
+       ::placeholder{
+             color:black;
+             }    
+      /* Media Query */
+      @media screen and (max-width: 500px) {
+          .main{
+            background-image: url('Hack Q/one (1).jpg');
+            background-size: cover;
+          }
+          #main{
+            width:70vw;
+            height:55vh;
+            overflow-y:visible;
+          }
+         h1{
+          font-size:2rem;
+          padding-top:15px;
+         } 
+         #user,#password, #for{
+          font-size:22px;
+          padding-right:0;
+         }
+         #password{
+          padding-top:15px;
+         }
+         #asd{
+            font-size:22px;
+            padding:3px 27px;
+         }
+        #myname, #pas{
+           width:50vw;
+           height:3vh;
+           font-size:20px;
+        } 
+        #input{
+           font-size:10px;
+           padding-top:10px;
+        }
+        #create{
+          font-size:15px;
+        }
+      }
+      /* second Media Query */
+      @media screen and (max-width: 400px) {
+       #for{
+        font-size:15px;
+       }
+       #myname,#pas{
+       
+        padding:3px 10px;
+       }
+       #er1.error, #er2.error{
+        font-size:15px;
+       }
+       
+      } 
+     /*Media Query in Height */
+     @media screen and (max-height: 578px) {
+       h1{
+        font-size:20px;
+       }
+       #user,#password{
+          font-size:18px;
+       }
+       #myname, #pas{
+          padding:1px 5px;
+       }
+     }             
+       </style> 
+  
+<body>
+     <!-- HtML Code -->
+ <div class="main">
+   <div id="main">
+        <h1>Hack Q</h1>
+        <form type="post">
+        <div id="user">Username</div>
+        <div id="input"><input type="email" maxlength="20" placeholder="Enter Username"id="myname"
+         required
+         autocomplete="off"></div>
+        <p id="er1" class="error"></p>
+        <div id="password">Password</div>
+        <div id="inpas"><input type="password" maxlength="16" placeholder="Enter Password" id="pas" 
+        required
+        autocomplete="off" ></div>
+        <p id="er2" class="error"></p>
+        <div id="for"><a href="#" id="fr" onclick="fors()">Forgotten Password? </a></div>
+        <div class="create"><a href="Hack Q/Create.html" id="create">Create An Account</a></div>
+   <a href="#" id="asd"onclick="login()">LOG IN</a>
+  
+        </form>
+        
+   </div> 
+</div>
+  <!-- Java Script Code -->
+<script>
+   let email = document.getElementById("myname");
+   let password = document.getElementById("pas");
+                         
+    const id =localStorage.getItem("Email");
+    const no = localStorage.getItem("Password");
+    let admin = 'admin';
+
+     function login(){
+       if(email.value==""&&password.value==""){
+           document.getElementById("er1").innerHTML = "*Enter Email id*";
+           document.getElementById("er2").innerHTML = "*Enter Password*";
+           email.style.border = "4px double red";
+           email.focus();
+           password.style.border = "4px double red";
+           password.focus();
+      }else if(email.value==""){
+          document.getElementById("er1").innerHTML = "*Enter Email Id*";
+          document.getElementById("er2").innerHTML = "";
+      }else if(password.value==""){
+          document.getElementById("er1").innerHTML = "";
+          document.getElementById("er2").innerHTML = "*Enter Password*";
+      }else if(email.value==id&&password.value==no){
+           window.location.href = "Hack Q/hackqhome.html";
+      }else if(email.value==admin&&password.value==admin){
+           window.location.href = "Hack Q/hackqhome.html";
+      }else if(email.value!=id&&password.value!=no){
+             document.getElementById("er1").innerHTML = "*Wrong Email id*";
+             document.getElementById("er2").innerHTML = "*Wrong Password*"; 
+      }else if(email.value==id&&password.value!=no){
+            document.getElementById("er2").innerHTML = "*Wrong Password*"; 
+            document.getElementById("er1").innerHTML = "";  
+      }else if(password.value==no&&email.value!=id){
+              document.getElementById("er1").innerHTML = "*Wrong Email id*";  
+              document.getElementById("er2").innerHTML = "";
+      }else{
+           document.getElementById("er1").innerHTML = "";
+           document.getElementById("er2").innerHTML = "";
+          
+      }
+          
+       }
+
+       function fors(){
+            if(id!=''&&no!=''){
+                email.value =id;
+                password.value = no;
+            }else{
+             email.value = 'admin';
+             password.value = 'admin';
+            }
+            
+          }  
+         
+        window.addEventListener('keydown',function(lol){
+             let check = lol.key;
+            if(check=='Enter'){
+                 login();
+                }
+            });  
+         
+
+        email.addEventListener('textInput',function(){
+                      if(email.value.length>=5){
+                          document.getElementById("er1").innerHTML = "";
+                         }else{
+                         document.getElementById("er1").innerHTML = "*Enter Email Id*";
+                         }
+                      });
+                                      
+    password.addEventListener('textInput',function(){
+                         if(password.value.length>=7){
+                           document.getElementById("er2").innerHTML = "";
+                           }
+                       });   
+                       
+                          
+            
+   </script>
+  </body> 
+</html>                  

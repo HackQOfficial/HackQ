@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account Hack Q</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+   *{
+    padding:0;
+    margin:0;
+   }
+   .main{
+     background-image:url('vid.gif');
+     background-size:cover;
+     width:100vw;
+     height:100vh;
+     display:flex;
+     overflow: hidden;
+     justify-content: center;
+     align-items: center;
+     
+   }
+   .sub-main{
+       width:30vw;
+       height:60vh;
+       border-radius: 9px;
+       background-color:rgba(255, 255, 255, 0.728);
+       box-shadow: 7px 3px rgba(0, 0, 0, 0.508);
+       text-align:center;
+      
+   }
+   .kya{
+    width:80%;
+    height:6%;
+    margin:10px;
+   }
+  
+   h1{
+    margin-top:50px;
+    font-family: 'Heebo', sans-serif;
+   }
+   .sign{
+    width:13vw;
+    height:3vh;
+    margin-left:9rem;
+    border-style:solid;
+    border-color:red;
+    border-radius:20px;
+    padding-bottom:5px;
+   }
+   .sign:hover{
+       color:black;
+      
+   }
+   #sign{
+     font-size:24px;
+     text-decoration:none;
+     font-family: 'Heebo', sans-serif;
+    
+   }
+   #login{
+    font-family: 'Heebo', sans-serif;
+    font-size:20px;
+    letter-spacing: 3px;
+    font-weight:13px;
+    color:blue;
+    text-decoration:none;
+    
+   }
+   #login:hover{
+      text-decoration:underline;
+   }
+   .error{
+      text-align:start;
+      padding-left:60px;
+      color:blue;
+   }
+   input{
+      border-radius:5px;
+      border-style: none;
+   }
+   ::placeholder{
+    padding-left:10px;
+    font-size:17px;
+    letter-spacing: 1px;
+   }
+   ::selection{
+       color:blue;
+       background-color:grey;
+   }
+   /* Media Query */
+   @media only screen and (max-width: 500px) {
+    .sub-main{
+        width:60vw;
+        height:70%;
+    }
+     h1{font-size:15px;}
+     input{width:15px;}
+     ::placeholder{font-size:9px;}
+     h3{padding-left:0;font-size:15px;}
+     .sign{width:40vw;
+           height:4vh;
+           margin-left:50px;       
+    }
+}
+    /*Media Small */
+    @media only screen and (max-width: 350px) {
+        .sign{width:40vw;
+           height:4vh;
+           margin-left:30px;       
+    }
+    }
+
+</style>
+<body>
+    <div class="main">
+        <div class="sub-main">
+            <h1>Create An Account</h1><br>
+            <input type="text" placeholder="Enter Your Full Name" maxlength="10" class="kya" id="name"><br>
+             <p class="error" id="name1"></p>
+            <input type="email" placeholder="Enter Your Email Id" class="kya" maxlength="20" id="email"><br>
+            <p class="error" id="email1"></p>
+            <input type="password" placeholder="Enter Your Password" class="kya" maxlength="15" id="pas"><br>
+              <p class="error" id="pas1"></p>
+            <input type="password" placeholder="Re-enter Your Password" class="kya" maxlength="15" id="pass"><br>
+               <p class="error" id="pass1"></p>
+           <h3 style="text-align:left; padding-left:70px;"><input type="checkbox"> I agree All Terms of Services</h3><br>
+           <div class="sign"><a href="#" id="sign" onclick="Signup()">Sign Up</a></div><br>
+            <a href="../index.html" id="login">Login</a><br>
+        </div>
+    </div>
+   <script>
+   // let sign = document.getElementById('sign');
+   //   sign.addEventListener('click',Signup);
+     function Signup(){
+         let name = document.getElementById('name').value;
+         let email = document.getElementById('email').value;
+         let pas = document.getElementById('pas').value;
+         let pass = document.getElementById('pass').value;
+         
+          // Error Code
+             let name1 = document.getElementById('name1');
+             let email1 = document.getElementById('email1');
+             let pas1 = document.getElementById('pas1');
+             let pass1 = document.getElementById('pass1');
+        
+          name==''? name1.innerHTML = "Enter Your name" : name1.innerHTML = "";
+          email==''? email1.innerHTML = "Enter Your Email Id":email1.innerHTML = "";
+          pas==''? pas1.innerHTML = "Enter Your Password": pas1.innerHTML = "";
+          pass==''? pass1.innerHTML = "Re-Enter Your Password":pass1.innerHTML = "";   
+          if(pas==pass){
+            pass1.innerHTML = "";
+            
+         }else{
+            pass1.innerHTML = "Password did't Match ";
+         }
+        // Store Data
+        const namelo = localStorage.setItem('Name',name);
+        const emaillo = localStorage.setItem('Email',email);
+        const passlo = localStorage.setItem('Password',pass);
+       
+        if(name,email,pas,pass!=''&&pas==pass){
+            alert("Account Created Sucessful ");
+           
+        }
+
+
+
+
+
+         
+            
+     }
+   </script>
+</body>
+</html>

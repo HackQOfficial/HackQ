@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+   <head>  
+       <title>
+             Clock
+       </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Css Code Is Here -->   
+ <style>
+ @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+    *{
+      padding:0;
+      margin:0;
+      color:white;
+      }
+     body{
+         background-color:black;
+         } 
+  @keyframes move{0%{border-color:yellow blue blue blue;}10%{border-color:yellow yellow blue blue;}20%{border-color:yellow yellow yellow blue;}30%{border-color:yellow yellow yellow yellow;}40%{border-color:#0048BA #7CB9E8 #DB2D43 #E52B50;}50%{border-color:#3B7A57#FFBF00 #9966CC #3DDC84;}60%{border-color:#841B2D #00FFFF #D0FF14 #007FFF;}70%{border-color:#7C0A02 #2E5894 #3D0C02 #54626F;}80%{border-color:#1F75FE #333399 #8A2BE2 #66FF00;}90%{border-color:#FFAA1D #1B4D3E #AA381E #FBEC5D;}100%{border-color:#8F00FF #8806CE #87421F #9EFD38;}}
+   .main{ 
+        width:100vw;
+        height:100vh;
+        }   
+   .main h1{
+           font-size:3rem;
+           text-align:center;
+           letter-spacing:2.5px;
+           padding-top:3rem;
+           font-family: 'Source Sans Pro', sans-serif;
+           } 
+           
+      .sub-main{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:35px;
+
+          }  
+      #hour, #minute, #sec,#day,#year,#month{
+             letter-spacing:5px;
+             margin-left:30px;
+             padding:15px;
+             border-radius:10px;
+             margin-top:100px;
+             background-color:black;
+             border-style:solid;
+            
+             } 
+             
+         #day, #month, #minute{ 
+             animation-name:move;
+             animation-duration:10s;
+             animation-iteration-count:infinite;
+             }     
+         #hour,#sec, #year{
+              animation-name:move;
+             animation-duration:10s;
+             animation-direction:reverse;
+             animation-iteration-count:infinite;
+                     } 
+            #parent{
+               text-align:center;
+               font-size:40px;
+               
+               } 
+            #parent div{
+                  color:lime;
+                  background-color:black;
+                  border-style:solid;
+                  margin:20px;
+                  border-color:orange;
+                  }        
+        @media only screen and (max-width: 800px) {
+                   .main{
+                       width:100vw;
+                       }
+                   .sub-main{
+                       display:inline-block;
+                       
+                      }
+                   #hour, #minute, #sec,#day,#year,#month{
+                      width:80vw;
+                      font-size:70px;
+                      text-align:center;
+                      margin-top:30px;
+                      
+              
+             }     
+}         
+  #man{
+     text-align:center;
+     margin-top:40px;
+     margin-bottom:20px;
+     font-size:35px;
+  } 
+  #main{
+     text-decoration:none;
+     color:lime;
+  } 
+  #main:hover{
+     color:red;
+  } 
+  </style>    
+     
+ 
+   </head>
+<body>
+   <div class="main">
+        <h1>India Standard Time</h1>
+      <div class="sub-main">
+          <div id="day"></div>
+          <div id="year"></div>
+          <div id="month"></div>
+          <div id="hour"></div>
+          <div id="minute"></div>
+          <div id="sec"></div>
+      </div>               
+      <div id="man"><a href="hackqhome.html" id="main">Main Menu</a></div>
+ </div>  
+  <script>     
+        //How Clock Works
+        /* 
+         12 = 12pm
+          13 = 1pm -- 12-13 = 1;
+          14 = 2pm -- 14-12 = 2;
+         */
+      // Create And Append Elemnt
+        setInterval(function(){
+                let day = document.getElementById("day");
+                let year = document.getElementById("year");
+                let month = document.getElementById("month");
+                let hour = document.getElementById("hour");
+                let min = document.getElementById("minute");
+                let sec = document.getElementById("sec");
+                 let date = new Date();
+       // Day          
+                 let da = date.getDay();
+                 
+                     let dy;
+                     switch(da){
+                            case 1 : dy = "Mon";
+                                 break;
+                            case 2 : dy = "Tue";
+                                 break;
+                            case 3: dy = "Wed";
+                                 break;
+                             case 4 : dy = "Thu";
+                                 break;
+                             case 5 : dy = "Fri";
+                                  break;
+                             case 6 : dy = "Sat";
+                                 break; 
+                            case 0 : dy = "Sun";
+                                 break;
+                              }   
+                           day.innerHTML = dy;   
+        // Year                   
+                 year.innerHTML = date.getFullYear();
+        // Month         
+                let mo = date.getMonth();  
+                let so;          
+                   switch(mo){
+                            case 0 : so = "Jan";
+                                 break; 
+                            case 1 : so = "Feb";
+                                 break;
+                            case 2 : so = "Mar";
+                                 break;
+                            case 3: so = "Apr";
+                                 break;
+                             case 4 : so = "May";
+                                 break;
+                             case 5 : so = "June";
+                                  break;
+                             case 6 : so = "July";
+                                 break; 
+                            case 7 : so = "Aug";
+                                 break;
+                            case 8 : so = "Sep";
+                                 break;
+                            case 9: so = "Oct";
+                                 break;
+                             case 10 : so = "Nov";
+                                 break;
+                             case 11 : so = "Dec";
+                                  break;     
+                                                         
+                            }
+                           
+                         // month.innerHTML = date.getMonth();
+                         month.innerHTML = so;
+        // Hours            
+                 let hr = date.getHours();
+                 if(hr>12){
+                       hour.innerHTML = '0'+(hr-12)+"Pm";
+                      }else if(hr<10){
+                        hour.innerHTML = '0'+hr+"Am";
+                     }else{
+                         hour.innerHTML = hr+"Am";
+                         }           
+        // Minute        
+                let m = date.getMinutes();                  
+              if(m<10){
+                      min.innerHTML = '0'+m+"Min"; 
+                     }else{
+                       min.innerHTML = m+"Min";
+                     }    
+                 let s = date.getSeconds();
+                    let se = s<10 ? sec.innerHTML = '0'+s+"Sec" : sec.innerHTML = s+"Sec";
+                 //sec.innerHTML = date.getSeconds()+"Sec";
+                     sec.innerHTML = se;
+              },1000);                   
+                          
+         // My Logic For Night
+         let change = document.getElementsByClassName("main");
+         let date = new Date();
+            let hr = date.getHours();
+                 if(hr>16){
+                       change[0].style.cssText = "background-image:url('kg.jpg');";
+                       change[0].style.backgroundSize = "cover";
+                        console.log("Its Night Time 1(hr>16)");
+                    }else if(hr<=5){
+                        change[0].style.cssText = "background-image:url('kg.jpg');";
+                       change[0].style.backgroundSize = "cover";
+                         console.log("Its Still The Night Good Night 2 (hr<=5)");
+                    }else{
+                       change[0].style.cssText = "background-image:url('day.jpg');";
+                       change[0].style.backgroundSize = "cover";
+                       console.log("Its Morning Soo !Good Morning");
+                        }   
+              
+         /* Pratice Code Will Done Here */
+          //traversing Element
+           //   #child, #parent
+                       
+            console.log(date);
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                                                        
+                
+  </script> 
+   </body>
+   </html>
